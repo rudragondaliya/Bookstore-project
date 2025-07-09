@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, Link } from 'react-router-dom';
 import { FaEnvelope, FaLock } from 'react-icons/fa';
-import { loginUser } from '../auth/authThunk';
+import { loginUser } from '../auth/auththunk';
 
 const Login = () => {
   const [form, setForm] = useState({ email: '', password: '' });
