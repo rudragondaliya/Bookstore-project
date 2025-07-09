@@ -13,12 +13,14 @@ const Signup = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     const result = await dispatch(registerUser(form));
-    if (registerUser.fulfilled.match(result)) navigate('/');
+    if (registerUser.fulfilled.match(result)) {
+      navigate('/');
+    }
   };
 
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
-      <div className="card glass p-4 border-0 shadow" style={{ width: '100%', maxWidth: '400px', backdropFilter: 'blur(10px)' }}>
+      <div className="card p-4 border-0 shadow" style={{ width: '100%', maxWidth: '400px', backdropFilter: 'blur(10px)' }}>
         <div className="text-center mb-3">
           <h3 className="fw-bold text-primary">Create Account</h3>
           <p className="text-muted small">Sign up to manage your books</p>
@@ -28,12 +30,12 @@ const Signup = () => {
 
         <form onSubmit={handleSubmit}>
           <div className="mb-3 input-group">
-            <span className="input-group-text bg-white border-end-0">
+            <span className="input-group-text bg-white">
               <FaEnvelope className="text-primary" />
             </span>
             <input
               type="email"
-              className="form-control border-start-0"
+              className="form-control"
               placeholder="Email"
               value={form.email}
               onChange={e => setForm({ ...form, email: e.target.value })}
@@ -42,16 +44,17 @@ const Signup = () => {
           </div>
 
           <div className="mb-3 input-group">
-            <span className="input-group-text bg-white border-end-0">
+            <span className="input-group-text bg-white">
               <FaLock className="text-primary" />
             </span>
             <input
               type="password"
-              className="form-control border-start-0"
+              className="form-control"
               placeholder="Password"
               value={form.password}
               onChange={e => setForm({ ...form, password: e.target.value })}
               required
+              minLength={6}
             />
           </div>
 
