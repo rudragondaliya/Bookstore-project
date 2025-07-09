@@ -85,7 +85,7 @@ import { auth } from './firebase';
 import { setUser } from './auth/authSlice';
 
 import Login from './pages/Login';
-import Signup from './pages/Signup';
+import SignUp from './pages/SignUp';
 import ProtectedRoute from './components/ProtectedRoute';
 
 import Dashboard from './pages/Dashboard';
@@ -111,7 +111,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/signup" element={<SignUp/>} />
 
         <Route
           path="/"
