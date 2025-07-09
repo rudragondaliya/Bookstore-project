@@ -5,7 +5,7 @@ import { auth } from './firebase';
 import { setUser } from './auth/authSlice';
 
 import Login from './pages/Login';
-import Signup from './pages/Signup';
+import Signup from './pages/SignUp;'
 import ProtectedRoute from './components/ProtectedRoute';
 
 
