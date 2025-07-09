@@ -9,7 +9,8 @@ A full-stack React application that allows users to **Sign Up, Login**, and **ma
 ### 🚀 Live Demo
 
 🔗 [Live Link (Deploy on Vercel/Firebase)](https://bookstore-project-iota-mauve.vercel.app/)
-*👉 Replace with your actual deployed URL.*
+
+
 
 ---
 
